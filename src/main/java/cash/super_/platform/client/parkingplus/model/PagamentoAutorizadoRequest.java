@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * PagamentoAutorizadoRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-10T21:57:48.744Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-10T22:03:09.799Z")
 
 
 
