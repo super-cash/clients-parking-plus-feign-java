@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PagamentoEfetuado
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-06T03:48:42.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-10T17:02:09.002Z")
 
 
 
@@ -59,11 +59,23 @@ public class PagamentoEfetuado {
   @JsonProperty("nsu")
   private String nsu = null;
 
+  @JsonProperty("permanencia")
+  private Long permanencia = null;
+
+  @JsonProperty("permanenciaFim")
+  private Long permanenciaFim = null;
+
+  @JsonProperty("prepago")
+  private Boolean prepago = null;
+
   @JsonProperty("rps")
   private String rps = null;
 
   @JsonProperty("serieRps")
   private String serieRps = null;
+
+  @JsonProperty("ticket")
+  private String ticket = null;
 
   /**
    * O tipo do serviço pago.
@@ -107,6 +119,9 @@ public class PagamentoEfetuado {
 
   @JsonProperty("valorPago")
   private Long valorPago = null;
+
+  @JsonProperty("valorDesconto")
+  private Integer valorDesconto = null;
 
   public PagamentoEfetuado cnpjGaragem(String cnpjGaragem) {
     this.cnpjGaragem = cnpjGaragem;
@@ -288,6 +303,60 @@ public class PagamentoEfetuado {
     this.nsu = nsu;
   }
 
+  public PagamentoEfetuado permanencia(Long permanencia) {
+    this.permanencia = permanencia;
+    return this;
+  }
+
+   /**
+   * Data de entrada(Unix Epoch em milissegundos)
+   * @return permanencia
+  **/
+  @ApiModelProperty(value = "Data de entrada(Unix Epoch em milissegundos)")
+  public Long getPermanencia() {
+    return permanencia;
+  }
+
+  public void setPermanencia(Long permanencia) {
+    this.permanencia = permanencia;
+  }
+
+  public PagamentoEfetuado permanenciaFim(Long permanenciaFim) {
+    this.permanenciaFim = permanenciaFim;
+    return this;
+  }
+
+   /**
+   * Uma previsão da data permitida para saída se o ticket for pago com o valor atual (Unix Epoch em milissegundos)
+   * @return permanenciaFim
+  **/
+  @ApiModelProperty(value = "Uma previsão da data permitida para saída se o ticket for pago com o valor atual (Unix Epoch em milissegundos)")
+  public Long getPermanenciaFim() {
+    return permanenciaFim;
+  }
+
+  public void setPermanenciaFim(Long permanenciaFim) {
+    this.permanenciaFim = permanenciaFim;
+  }
+
+  public PagamentoEfetuado prepago(Boolean prepago) {
+    this.prepago = prepago;
+    return this;
+  }
+
+   /**
+   * Se o pagamento foi prepago
+   * @return prepago
+  **/
+  @ApiModelProperty(value = "Se o pagamento foi prepago")
+  public Boolean isPrepago() {
+    return prepago;
+  }
+
+  public void setPrepago(Boolean prepago) {
+    this.prepago = prepago;
+  }
+
   public PagamentoEfetuado rps(String rps) {
     this.rps = rps;
     return this;
@@ -322,6 +391,24 @@ public class PagamentoEfetuado {
 
   public void setSerieRps(String serieRps) {
     this.serieRps = serieRps;
+  }
+
+  public PagamentoEfetuado ticket(String ticket) {
+    this.ticket = ticket;
+    return this;
+  }
+
+   /**
+   * O número do ticket
+   * @return ticket
+  **/
+  @ApiModelProperty(value = "O número do ticket")
+  public String getTicket() {
+    return ticket;
+  }
+
+  public void setTicket(String ticket) {
+    this.ticket = ticket;
   }
 
   public PagamentoEfetuado tipo(TipoEnum tipo) {
@@ -360,6 +447,24 @@ public class PagamentoEfetuado {
     this.valorPago = valorPago;
   }
 
+  public PagamentoEfetuado valorDesconto(Integer valorDesconto) {
+    this.valorDesconto = valorDesconto;
+    return this;
+  }
+
+   /**
+   * Valor do desconto aplicado na tarifa em centavos(R$1,50 &#x3D; 150)
+   * @return valorDesconto
+  **/
+  @ApiModelProperty(value = "Valor do desconto aplicado na tarifa em centavos(R$1,50 = 150)")
+  public Integer getValorDesconto() {
+    return valorDesconto;
+  }
+
+  public void setValorDesconto(Integer valorDesconto) {
+    this.valorDesconto = valorDesconto;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -380,15 +485,20 @@ public class PagamentoEfetuado {
         Objects.equals(this.nfseNumero, pagamentoEfetuado.nfseNumero) &&
         Objects.equals(this.nfseQrCode, pagamentoEfetuado.nfseQrCode) &&
         Objects.equals(this.nsu, pagamentoEfetuado.nsu) &&
+        Objects.equals(this.permanencia, pagamentoEfetuado.permanencia) &&
+        Objects.equals(this.permanenciaFim, pagamentoEfetuado.permanenciaFim) &&
+        Objects.equals(this.prepago, pagamentoEfetuado.prepago) &&
         Objects.equals(this.rps, pagamentoEfetuado.rps) &&
         Objects.equals(this.serieRps, pagamentoEfetuado.serieRps) &&
+        Objects.equals(this.ticket, pagamentoEfetuado.ticket) &&
         Objects.equals(this.tipo, pagamentoEfetuado.tipo) &&
-        Objects.equals(this.valorPago, pagamentoEfetuado.valorPago);
+        Objects.equals(this.valorPago, pagamentoEfetuado.valorPago) &&
+        Objects.equals(this.valorDesconto, pagamentoEfetuado.valorDesconto);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cnpjGaragem, codigoAutorizacao, cpfCnpj, data, estaticonamento, linkLogoGaragem, nfseCodigoVerificacao, nfseNumero, nfseQrCode, nsu, rps, serieRps, tipo, valorPago);
+    return Objects.hash(cnpjGaragem, codigoAutorizacao, cpfCnpj, data, estaticonamento, linkLogoGaragem, nfseCodigoVerificacao, nfseNumero, nfseQrCode, nsu, permanencia, permanenciaFim, prepago, rps, serieRps, ticket, tipo, valorPago, valorDesconto);
   }
 
 
@@ -407,10 +517,15 @@ public class PagamentoEfetuado {
     sb.append("    nfseNumero: ").append(toIndentedString(nfseNumero)).append("\n");
     sb.append("    nfseQrCode: ").append(toIndentedString(nfseQrCode)).append("\n");
     sb.append("    nsu: ").append(toIndentedString(nsu)).append("\n");
+    sb.append("    permanencia: ").append(toIndentedString(permanencia)).append("\n");
+    sb.append("    permanenciaFim: ").append(toIndentedString(permanenciaFim)).append("\n");
+    sb.append("    prepago: ").append(toIndentedString(prepago)).append("\n");
     sb.append("    rps: ").append(toIndentedString(rps)).append("\n");
     sb.append("    serieRps: ").append(toIndentedString(serieRps)).append("\n");
+    sb.append("    ticket: ").append(toIndentedString(ticket)).append("\n");
     sb.append("    tipo: ").append(toIndentedString(tipo)).append("\n");
     sb.append("    valorPago: ").append(toIndentedString(valorPago)).append("\n");
+    sb.append("    valorDesconto: ").append(toIndentedString(valorDesconto)).append("\n");
     sb.append("}");
     return sb.toString();
   }

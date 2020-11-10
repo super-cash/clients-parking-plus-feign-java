@@ -13,7 +13,7 @@
 
 package cash.super_.platform.client.parkingplus.invoker;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-06T03:48:42.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-10T17:02:09.002Z")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
