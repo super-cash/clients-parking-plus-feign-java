@@ -27,7 +27,7 @@ import org.joda.time.DateTime;
 /**
  * Promocao
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-06T03:48:42.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-11-10T22:06:45.404Z")
 
 
 
